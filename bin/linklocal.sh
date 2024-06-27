@@ -1,5 +1,6 @@
-#!/bin/sh -eu
-MY_PACKAGE_NAME="@heiwa4126/hello-ts"
+#!/bin/bash -eu
+MY_PACKAGE_NAME=$(npm pkg get name)
+MY_PACKAGE_NAME=${MY_PACKAGE_NAME//\"/}
 NPM_CONFIG_PREFIX="$PWD/.npm-local"
 
 npm link
