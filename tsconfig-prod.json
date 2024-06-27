@@ -8,7 +8,12 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": false,
-    "declaration": true
+    "declaration": true,
+    "removeComments": false, // Remove comments from the compiled output for production. JSDocも消える
+    "noUnusedLocals": true, // Report error for unused local variables
+    "noUnusedParameters": true, // Report error for unused function parameters
+    "noImplicitReturns": true, // Report error for missing return statements on some code paths
+    "noFallthroughCasesInSwitch": true // Report error for missing break statements in switch cases
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
