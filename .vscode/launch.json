@@ -9,9 +9,9 @@
       "request": "launch",
       "name": "プログラムの起動",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/dist/index.js",
+      "program": "${workspaceFolder}/dist/dev/cli.js",
       // "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      "outFiles": ["${workspaceFolder}/dist/dev/*.js"]
     }
   ]
 }
