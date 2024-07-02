@@ -35,8 +35,12 @@ npm run lint
 npm run lint:package
 npm run format
 npm test
+# まずローカルに発行して試す。1個上にtarballできる。よそのプロジェクトでnpm i foo.tgzする
+npm run pack
+# バージョニング
 git add --all && git commit -am '...'
 npm verson patch
 git push && git push --tags
-npm run build && npm publish --access=public # or `npm run pack`
+# npmjs.com に発行
+npm run build && npm publish --access=public
 ```
