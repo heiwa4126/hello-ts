@@ -43,10 +43,8 @@
 		"typescript": "^5.5.3"
 	},
 	"scripts": {
-		"linklocal": "bin/linklocal.sh",
 		"watch": "tsc -w",
-		"ex1": "node examples/ex1.cjs",
-		"ex2": "node examples/ex2.mjs",
+		"ex0": "node ./dist/dev/cli.js",
 		"test": "jest",
 		"lint": "biome lint ./src",
 		"lint:package": "npmPkgJsonLint .",
@@ -54,6 +52,9 @@
 		"build:esm": "rm -rf dist/esm && tsc -p tsconfig.esm.json",
 		"build:cjs": "rm -rf dist/cjs && tsc -p tsconfig.cjs.json",
 		"build": "npm run build:esm && npm run build:cjs",
+		"linklocal": "bin/linklocal.sh",
+		"ex1": "node examples/ex1.cjs",
+		"ex2": "node examples/ex2.mjs",
 		"pack": "npm run format && npm run build && npm pack && mv *.tgz ../"
 	}
 }

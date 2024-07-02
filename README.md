@@ -30,17 +30,25 @@ console.log(hello("world"));
 ```sh
 npm i
 npm run watch &
+npm run ex0
 ## ./src の下をいろいろ編集する。 ./dist に出来る
 npm run lint
 npm run lint:package
 npm run format
 npm test
-# まずローカルに発行して試す。1個上にtarballできる。よそのプロジェクトでnpm i foo.tgzする
+## cjsとesmのテスト
+npm run build
+npm run linklocal
+npm run ex1
+npm run ex2
+# ローカルに発行して試す。1個上にtarballできる。よそのプロジェクトでnpm i foo.tgzする
 npm run pack
-# バージョニング
+# 発行準備 & バージョニング
 git add --all && git commit -am '...'
 npm verson patch
 git push && git push --tags
 # npmjs.com に発行
 npm run build && npm publish --access=public
 ```
+
+TypeScript めんどくさい...
