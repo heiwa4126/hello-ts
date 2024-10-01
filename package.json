@@ -35,7 +35,7 @@
 	],
 	"ignore": ["**/.DS_Store", "temp/"],
 	"devDependencies": {
-		"@types/jest": "^29.5.12",
+		"@types/jest": "^29.5.13",
 		"@types/node": "^20.14.9",
 		"@biomejs/biome": "1.8.3",
 		"jest": "^29.7.0",
