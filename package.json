@@ -47,7 +47,7 @@
 		"@types/node": "^25.3.3",
 		"jest": "^30.3.0",
 		"npm-package-json-lint": "^9.1.0",
-		"typescript": "5.9"
+		"typescript": "6.0"
 	},
 	"scripts": {
 		"watch": "tsc -w",
