@@ -42,7 +42,7 @@
 		"temp/"
 	],
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.16",
+		"@biomejs/biome": "^2.5.2",
 		"@types/jest": "^30.0.0",
 		"@types/node": "^26.1.0",
 		"jest": "^30.4.2",
