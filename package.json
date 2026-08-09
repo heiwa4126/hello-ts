@@ -1,32 +1,25 @@
 {
 	"name": "@heiwa4126/hello-ts",
 	"version": "1.0.0",
-	"main": "./dist/cjs/index.js",
-	"module": "./dist/esm/index.js",
-	"types": "./dist/esm/index.d.ts",
-	"type": "commonjs",
-	"bin": {
-		"hello-ts": "dist/cjs/cli.js"
-	},
-	"engines": {
-		"node": ">=16"
-	},
+	"description": "TypeScript package tutorial",
 	"keywords": [
 		"demo",
-		"typescript",
-		"helloworld"
+		"helloworld",
+		"typescript"
 	],
+	"homepage": "https://github.com/heiwa4126/hello-ts#readme",
+	"bugs": {
+		"url": "https://github.com/heiwa4126/hello-ts/issues"
+	},
+	"license": "MIT",
 	"author": "heiwa4126",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/heiwa4126/hello-ts.git"
 	},
-	"bugs": {
-		"url": "https://github.com/heiwa4126/hello-ts/issues"
+	"bin": {
+		"hello-ts": "dist/cjs/cli.js"
 	},
-	"homepage": "https://github.com/heiwa4126/hello-ts#readme",
-	"license": "MIT",
-	"description": "TypeScript package tutorial",
 	"files": [
 		"package.json",
 		"README.md",
@@ -37,31 +30,38 @@
 		"!**/*.test.*",
 		"!**/*.js.map"
 	],
-	"ignore": [
-		"**/.DS_Store",
-		"temp/"
-	],
-	"devDependencies": {
-		"@biomejs/biome": "^2.5.6",
-		"@types/jest": "^30.0.0",
-		"@types/node": "^26.1.2",
-		"jest": "^30.4.2",
-		"npm-package-json-lint": "^10.4.1",
-		"typescript": "7.0"
-	},
+	"type": "commonjs",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/esm/index.d.ts",
 	"scripts": {
 		"watch": "tsc -w",
 		"ex0": "node ./dist/dev/cli.js",
 		"test": "jest",
-		"lint": "biome lint ./src",
+		"lint": "oxlint",
 		"lint:package": "npmPkgJsonLint .",
-		"format": "biome format --write ./src package.json tsconfig*.json",
 		"build:esm": "rm -rf dist/esm && tsc -p tsconfig.esm.json",
 		"build:cjs": "rm -rf dist/cjs && tsc -p tsconfig.cjs.json",
 		"build": "npm run build:esm && npm run build:cjs",
 		"linklocal": "bin/linklocal.sh",
 		"ex1": "node examples/ex1.cjs",
 		"ex2": "node examples/ex2.mjs",
-		"pack": "npm run format && npm run build && npm pack && mv *.tgz ../"
-	}
+		"pack": "npm run format && npm run build && npm pack && mv *.tgz ../",
+		"format": "oxfmt",
+		"check": "oxfmt && oxlint --fix"
+	},
+	"devDependencies": {
+		"@types/jest": "^30.0.0",
+		"@types/node": "^26.1.2",
+		"jest": "^30.4.2",
+		"npm-package-json-lint": "^10.4.1",
+		"typescript": "7.0"
+	},
+	"engines": {
+		"node": ">=16"
+	},
+	"ignore": [
+		"**/.DS_Store",
+		"temp/"
+	]
 }

@@ -45,7 +45,7 @@ npm run ex2
 npm run pack
 # 発行準備 & バージョニング
 git add --all && git commit -am '...'
-npm verson patch
+npm version patch
 git push && git push --tags
 # npmjs.com に発行
 npm run build && npm publish --access=public
